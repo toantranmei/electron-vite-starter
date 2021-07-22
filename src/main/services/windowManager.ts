@@ -1,6 +1,6 @@
 import { app, BrowserWindow, Menu, dialog } from 'electron'
 
-import config from '@config/index'
+import config from '../../../config/index'
 import menuConfig from '../config/menu'
 import { winURL, loadingURL } from '../config/static'
 

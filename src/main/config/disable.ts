@@ -1,5 +1,5 @@
 import { globalShortcut } from 'electron'
-import config from '@config/index'
+import config from '../../../config/index'
 
 export const disableDevModeFromKeyboard = () => {
   if (

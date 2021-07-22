@@ -1,0 +1,32 @@
+{
+  "name": "e-dev",
+  "version": "1.0.0",
+  "main": ".runtime/runner.ts",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node .runtime/runner.ts"
+  },
+  "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.4",
+    "@rollup/plugin-commonjs": "^19.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.2",
+    "@types/node": "^16.4.0",
+    "@vitejs/plugin-vue": "^1.2.5",
+    "@vue/compiler-sfc": "^3.1.5",
+    "cfonts": "^2.9.3",
+    "chalk": "^4.1.1",
+    "electron": "^13.1.7",
+    "electron-devtools-installer": "^3.2.0",
+    "javascript-obfuscator": "^2.17.0",
+    "portfinder": "^1.0.28",
+    "rollup": "^2.53.3",
+    "rollup-plugin-esbuild": "^4.5.0",
+    "rollup-plugin-obfuscator": "^0.2.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5",
+    "vite": "^2.4.3",
+    "vue": "^3.1.5"
+  }
+}

@@ -24,8 +24,6 @@ function electronLog(data: any, color: string) {
     let log = ''
     data = data.toString().split(/\r?\n/)
 
-    console.log(data)
-
     data.forEach((line: string) => {
       log += `  ${line}\n`
     })
@@ -120,7 +118,7 @@ async function startRenderer(): Promise<void> {
       else {
         // So suck with config here, InlineConfig interface but export default config "UserConfig"
         // Link: https://vitejs.dev/guide/api-javascript.html#createserver
-        const server = await createServer({ ...rendererOptions })
+        const server = await createServer(rendererOptions())
 
         // set port if available
         process.env.PORT = String(port)
@@ -208,7 +206,7 @@ async function init() {
     await startMain()
 
     // Start electron runtime
-    startElectron()
+    await startElectron()
   } catch (error) {
     console.error(error)
     process.exit(1)

@@ -1,14 +1,17 @@
+import prodEnv from './prod.env'
+import devEnv from './dev.env'
+
 export default {
   build: {
     DisableDevModeFromKeyboard: true,
-    env: require('./prod.env'),
+    env: prodEnv,
     hotPublishUrl: '',
     hotPublishConfigName: '',
   },
   dev: {
-    env: require('./dev.env'),
+    env: devEnv,
     removeElectronJunk: true,
-    port: 9080,
+    port: 1004,
   },
   IsUseSysTitle: true,
   BuiltInServerPort: 100421,

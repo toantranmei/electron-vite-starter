@@ -16,9 +16,9 @@ class MainInit {
     if (process.env.NODE_ENV === 'development') {
       menuConfig.push({
         label: 'Developer',
-        subMenu: [
+        submenu: [
           {
-            label: 'Switch to developer panel',
+            label: 'Open Devtools',
             accelerator: 'Cmd/Ctrl + I',
             role: 'toggleDevtools',
           },
@@ -200,8 +200,9 @@ class MainInit {
    * HELP: If u have more idea pull and contribute <3
    */
   loadingWindow(loadingURL: string) {
+    console.log('run here...')
     this.loadWindow = new BrowserWindow({
-      width: 400,
+      width: 600,
       height: 600,
       frame: false,
       skipTaskbar: true,
@@ -215,10 +216,10 @@ class MainInit {
     this.loadWindow.setAlwaysOnTop(true)
 
     // The delay of two seconds can be adjusted later according to the situation,
-    // I think u increase more time, maybe 4-5 seconds to use can easy more to decide quit app =))
+    // I think u increase more time, maybe 7-8 seconds to use can easy more to decide quit app =))
     setTimeout(() => {
       this.createMainWindow()
-    }, 2500)
+    }, 3500)
   }
 
   // Initialize window function

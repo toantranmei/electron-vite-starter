@@ -8,7 +8,7 @@ import {
   nodeResolve,
   RollupNodeResolveOptions,
 } from '@rollup/plugin-node-resolve'
-// import obfuscator from 'rollup-plugin-obfuscator'
+import obfuscator from 'rollup-plugin-obfuscator'
 import typescript from 'rollup-plugin-typescript2'
 
 const typescriptTransformOptions = {
@@ -62,7 +62,7 @@ const nodeResolveOptions: RollupNodeResolveOptions = {
 }
 
 // If u want obfuscator code after build. Here for u: https://github.com/getkey/rollup-plugin-obfuscator
-// const obfuscatorOptions = {}
+const obfuscatorOptions = {}
 
 export default (env = 'production'): RollupWatchOptions => {
   return {
@@ -81,7 +81,7 @@ export default (env = 'production'): RollupWatchOptions => {
       }),
       json(),
       esBuild(esBuildOptions),
-      // obfuscator(obfuscatorOptions),
+      obfuscator(obfuscatorOptions),
       alias(aliasOptions),
     ],
     external: [

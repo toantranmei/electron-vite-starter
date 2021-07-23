@@ -23,7 +23,7 @@ function info() {
 const menu = [
   {
     label: 'File',
-    subMenu: [
+    submenu: [
       {
         label: 'Reload',
         accelerator: 'F5',
@@ -38,9 +38,9 @@ const menu = [
   },
   {
     label: 'Help',
-    subMenu: [
+    submenu: [
       {
-        label: 'Info',
+        label: 'About',
         click: function () {
           info()
         },

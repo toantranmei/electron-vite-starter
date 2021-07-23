@@ -200,7 +200,6 @@ class MainInit {
    * HELP: If u have more idea pull and contribute <3
    */
   loadingWindow(loadingURL: string) {
-    console.log('run here...')
     this.loadWindow = new BrowserWindow({
       width: 600,
       height: 600,

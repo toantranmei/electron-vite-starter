@@ -29,7 +29,7 @@ app.on('window-all-closed', () => {
   app.quit()
 })
 app.on('browser-window-created', () => {
-  console.log('window-created')
+  console.log('Window Created')
 })
 
 if (process.defaultApp) {

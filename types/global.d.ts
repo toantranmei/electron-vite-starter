@@ -1,4 +1,5 @@
 declare module 'cfonts'
+declare module 'multispinner'
 
 interface ImportMeta {
   env: Record<string, unknown>

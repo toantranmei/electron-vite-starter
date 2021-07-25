@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electron + Vite + React</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/main.tsx"></script>
+    <script>
+      if (process && process.env.NODE_ENV === 'development') {
+        window.__static = `http://localhost:${process.env.PORT}`
+      } else {
+        window.__static = __dirname
+      }
+    </script>
+  </body>
+</html>

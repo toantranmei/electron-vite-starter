@@ -1,6 +1,6 @@
 {
   "name": "create-ev",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": "trantoan960<trantoan.fox.97@gmail.com>",
   "bin": {
@@ -8,6 +8,7 @@
   },
   "files": [
     "index.js",
+    "utils.js",
     "templates/template-*"
   ],
   "main": "index.js",

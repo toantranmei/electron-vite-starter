@@ -1,0 +1,31 @@
+{
+  "name": "create-ev",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "trantoan960<trantoan.fox.97@gmail.com>",
+  "bin": {
+    "create-ev": "index.js"
+  },
+  "files": [
+    "index.js",
+    "templates/template-*"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trantoan960/electron-vite-template.git",
+    "directory": "packages/create-ev"
+  },
+  "bugs": {
+    "url": "https://github.com/trantoan960/electron-vite-template/issues"
+  },
+  "homepage": "https://github.com/trantoan960/electron-vite-template/tree/main/packages/create-ev#readme",
+  "dependencies": {
+    "kolorist": "^1.5.0",
+    "minimist": "^1.2.5",
+    "prompts": "^2.4.1"
+  }
+}

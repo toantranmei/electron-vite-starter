@@ -1,4 +1,4 @@
-# Electron + Vite + Vue 3 + Typescript | Project Template
+# Electron + Vite + Typescript Project Template
 
 <p align="center">
   <img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1024px-Electron_Software_Framework_Logo.svg.png">

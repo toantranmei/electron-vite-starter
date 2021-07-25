@@ -3,17 +3,12 @@
   "description": "👻 A fast Simple Vite 2, Vue 3 and Electron 13.x template.",
   "author": "trantoan960<trantoan.fox.97@gmail.com>",
   "version": "1.0.0",
-  "main": "./dist/electron/main/main.js",
   "license": "MIT",
-  "scripts": {
-    "dev": "ts-node .runtime/runner.ts",
-    "build": "cross-env BUILD_TARGET=clean ts-node .runtime/builder.ts && ts-node .runtime/builder.ts && electron-builder",
-    "build:win32": "cross-env BUILD_TARGET=clean ts-node .runtime/builder.ts && ts-node .runtime/builder.ts && electron-builder --win  --ia32",
-    "build:win64": "cross-env BUILD_TARGET=clean ts-node .runtime/builder.ts && ts-node .runtime/builder.ts && electron-builder --win  --x64",
-    "build:mac": "cross-env BUILD_TARGET=clean ts-node .runtime/builder.ts && ts-node .runtime/builder.ts && electron-builder --mac",
-    "build:dir": "cross-env BUILD_TARGET=clean ts-node .runtime/builder.ts && ts-node .runtime/builder.ts && electron-builder --dir",
-    "build:clean": "cross-env BUILD_TARGET=clean ts-node .runtime/builder.ts",
-    "build:web": "cross-env BUILD_TARGET=web ts-node .electron-vite/builder.ts"
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.4",
@@ -42,49 +37,5 @@
     "vite": "^2.4.3",
     "vue": "^3.1.5",
     "vue-router": "4"
-  },
-  "build": {
-    "asar": true,
-    "extraFiles": [],
-    "publish": [
-      {
-        "provider": "generic",
-        "url": "http://127.0.0.1"
-      }
-    ],
-    "productName": "Electron Vite Template",
-    "appId": "org.tran.electron",
-    "directories": {
-      "output": "build"
-    },
-    "files": [
-      "dist/electron/**/*"
-    ],
-    "dmg": {
-      "contents": [
-        {
-          "x": 410,
-          "y": 150,
-          "type": "link",
-          "path": "/Applications"
-        },
-        {
-          "x": 130,
-          "y": 150,
-          "type": "file"
-        }
-      ]
-    },
-    "mac": {
-      "icon": "build/icons/icon.icns"
-    },
-    "win": {
-      "icon": "build/icons/icon.ico",
-      "target": "nsis"
-    },
-    "linux": {
-      "target": "deb",
-      "icon": "build/icons"
-    }
   }
 }

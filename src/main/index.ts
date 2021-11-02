@@ -1,9 +1,9 @@
 'use strict'
 
 import { app } from 'electron'
-// import electronDevtoolsInstaller, {
-//   VUEJS_DEVTOOLS,
-// } from 'electron-devtools-installer'
+import electronDevtoolsInstaller, {
+  VUEJS3_DEVTOOLS,
+} from 'electron-devtools-installer'
 
 import InitWindow from './services/windowManager'
 import { disableDevModeFromKeyboard } from './config/disable'
@@ -11,12 +11,13 @@ import { disableDevModeFromKeyboard } from './config/disable'
 function onAppReady() {
   new InitWindow().initWindow()
   disableDevModeFromKeyboard()
-  // TODO: turn on dev tools, but have a trouble install vue devtools, so i comment again, this is a feature
-  // if (process.env.NODE_ENV === 'development') {
-  //   electronDevtoolsInstaller(VUEJS_DEVTOOLS)
-  //     .then((name) => console.log(`Installed: ${name}`))
-  //     .catch((err) => console.log('Unable to install `vue-devtools`: \n', err))
-  // }
+
+  if (process.env.NODE_ENV === 'development') {
+    // Install vue devtools
+    electronDevtoolsInstaller(VUEJS3_DEVTOOLS.id)
+      .then((name) => console.log(`Installed: ${name}`))
+      .catch((err) => console.log('Unable to install `vue-devtools`: \n', err))
+  }
 }
 
 app.isReady() ? onAppReady() : app.on('ready', onAppReady)
